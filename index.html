@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para mi cielo 💙</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(#bfe9ff, #ffffff);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  text-align: center;
+  color: #4a90c2;
+}
+
+.nube {
+  position: absolute;
+  font-size: 50px;
+  animation: flotar 5s infinite alternate;
+}
+
+@keyframes flotar {
+  from {transform: translateY(0);}
+  to {transform: translateY(30px);}
+}
+
+.contenedor {
+  margin-top: 100px;
+  animation: aparecer 2s;
+}
+
+@keyframes aparecer {
+  from {opacity:0; transform:scale(.7);}
+  to {opacity:1; transform:scale(1);}
+}
+
+button {
+  background:#8ed8ff;
+  border:none;
+  padding:15px 30px;
+  margin:10px;
+  border-radius:30px;
+  font-size:18px;
+  color:white;
+  cursor:pointer;
+  box-shadow:0 5px 15px #9edcff;
+}
+
+button:hover {
+  transform:scale(1.1);
+}
+
+.menu {
+  display:none;
+}
+
+.tiburon {
+  position:absolute;
+  bottom:20px;
+  font-size:45px;
+  animation:nadar 8s infinite linear;
+}
+
+@keyframes nadar {
+  from {left:-60px;}
+  to {left:100%;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="nube" style="top:20px;left:20px;">☁️</div>
+<div class="nube" style="top:80px;right:30px;">☁️</div>
+
+<div class="contenedor" id="inicio">
+
+<h1>💗 Para mi cielo 💗</h1>
+
+<p>¿Quieres ver lo que preparé para ti? :3 ☁️</p>
+
+<button onclick="entrar()">Sí 💗</button>
+<button onclick="no()">No 💔</button>
+
+<p id="mensaje"></p>
+
+</div>
+
+
+<div class="menu" id="menu">
+
+<h1>Bienvenida, mi niña hermosa 💗</h1>
+
+<p>Escoge un apartado :3 💗 </p>
+
+<button>💌 Carta para ti</button>
+<button>🎵 Canciones</button>
+<button>📸 Nuestros momentos</button>
+<button>💗 Carta final</button>
+
+</div>
+
+
+<div class="tiburon">🦈</div>
+
+
+<script>
+
+function entrar(){
+document.getElementById("inicio").style.display="none";
+document.getElementById("menu").style.display="block";
+}
+
+
+function no(){
+document.getElementById("mensaje").innerHTML=
+"Ándale será bonito 💙<br><button onclick='entrar()'>Ver sorpresa ☁️</button>";
+}
+
+</script>
+
+
+</body>
+</html>
