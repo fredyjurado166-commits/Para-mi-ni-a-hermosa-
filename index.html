@@ -5,18 +5,15 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Para mi cielo 💙</title>
 
-
 <style>
 
-/* =====================================================
+/* ================================
    GENERAL
-===================================================== */
+================================ */
 
 * {
     box-sizing: border-box;
@@ -24,13 +21,11 @@
 
 html,
 body {
-
     margin: 0;
     padding: 0;
 
     width: 100%;
     height: 100%;
-
 }
 
 body {
@@ -44,13 +39,12 @@ body {
     color: white;
 
     background: #8ed8ff;
-
 }
 
 
-/* =====================================================
-   CIELO — 50%
-===================================================== */
+/* ================================
+   CIELO
+================================ */
 
 .cielo {
 
@@ -67,19 +61,19 @@ body {
     z-index: 1;
 
     background:
+
         linear-gradient(
             to bottom,
             #78cdf7 0%,
             #a9e3ff 45%,
             #dff7ff 100%
         );
-
 }
 
 
-/* =====================================================
+/* ================================
    NUBES
-===================================================== */
+================================ */
 
 .nube {
 
@@ -95,62 +89,48 @@ body {
         infinite
         alternate
         ease-in-out;
-
 }
 
 .nube1 {
 
     top: 35px;
-
     left: 5%;
-
 }
 
 .nube2 {
 
     top: 90px;
-
     right: 8%;
 
     animation-delay: 1s;
-
 }
 
 .nube3 {
 
     top: 170px;
-
     left: 40%;
 
     font-size: 35px;
 
     animation-delay: 2s;
-
 }
 
 
 @keyframes flotar {
 
     from {
-
-        transform:
-            translateY(0);
-
+        transform: translateY(0);
     }
 
     to {
-
-        transform:
-            translateY(18px);
-
+        transform: translateY(18px);
     }
-
 }
 
 
-/* =====================================================
-   MAR — 50%
-===================================================== */
+/* ================================
+   MAR
+================================ */
 
 .mar {
 
@@ -168,24 +148,19 @@ body {
 
         linear-gradient(
             to bottom,
-
             #159bd7 0%,
-
             #087fbd 35%,
-
             #05649b 70%,
-
             #034d78 100%
         );
 
     z-index: 2;
-
 }
 
 
-/* =====================================================
+/* ================================
    LUZ DEL AGUA
-===================================================== */
+================================ */
 
 .mar::before {
 
@@ -212,13 +187,12 @@ body {
     pointer-events: none;
 
     z-index: 1;
-
 }
 
 
-/* =====================================================
-   SUPERFICIE DEL AGUA
-===================================================== */
+/* ================================
+   SUPERFICIE
+================================ */
 
 .superficie {
 
@@ -246,49 +220,40 @@ body {
         rgba(255,255,255,.45);
 
     animation:
-
         oleaje
         4s
         infinite
         ease-in-out;
 
     z-index: 20;
-
 }
 
 
 @keyframes oleaje {
 
     0% {
-
         transform:
             translateX(-2%)
             scaleY(1);
-
     }
 
     50% {
-
         transform:
             translateX(2%)
             scaleY(1.25);
-
     }
 
     100% {
-
         transform:
             translateX(-2%)
             scaleY(1);
-
     }
-
 }
 
 
-/* =====================================================
-   ANIMALES DEL MAR
-===================================================== */
+/* ================================
+   ANIMALES
+================================ */
 
 .animal-mar {
 
@@ -303,46 +268,41 @@ body {
     user-select: none;
 
     filter:
-
         drop-shadow(
             0 5px 5px
             rgba(0,0,0,.22)
         );
-
 }
 
 
-/* =====================================================
+/* ================================
    MANTARRAYA 1
-===================================================== */
+================================ */
 
 .animal1 {
 
-    width: 130px;
+    width: 135px;
 
-    left: 6%;
-
-    top: 18%;
+    left: 7%;
+    top: 20%;
 
     animation:
         manta1
         5s
         infinite
         ease-in-out;
-
 }
 
 
-/* =====================================================
+/* ================================
    TIBURÓN 1
-===================================================== */
+================================ */
 
 .animal2 {
 
     width: 150px;
 
     right: 7%;
-
     top: 40%;
 
     animation:
@@ -350,20 +310,18 @@ body {
         6s
         infinite
         ease-in-out;
-
 }
 
 
-/* =====================================================
+/* ================================
    MANTARRAYA 2
-===================================================== */
+================================ */
 
 .animal3 {
 
     width: 115px;
 
     left: 42%;
-
     top: 58%;
 
     animation:
@@ -371,236 +329,192 @@ body {
         5.5s
         infinite
         ease-in-out;
-
 }
 
 
-/* =====================================================
-   TIBURÓN 2
-===================================================== */
+/* ================================
+   MANTARRAYA 3
+================================ */
 
 .animal4 {
 
-    width: 140px;
+    width: 125px;
 
     right: 28%;
-
-    top: 16%;
+    top: 15%;
 
     animation:
-        tiburon2
+        manta3
         7s
         infinite
         ease-in-out;
-
 }
 
 
-/* =====================================================
-   ANIMAL 5
-===================================================== */
+/* ================================
+   TIBURÓN 2
+================================ */
 
 .animal5 {
 
-    width: 100px;
+    width: 105px;
 
     left: 70%;
-
     top: 68%;
 
     animation:
-        animal5
+        tiburon2
         4.5s
         infinite
         ease-in-out;
-
 }
 
 
-/* =====================================================
+/* ================================
    MOVIMIENTO MANTARRAYA 1
-===================================================== */
+================================ */
 
 @keyframes manta1 {
 
     0% {
-
         transform:
             translate(0,0)
             rotate(-3deg);
-
     }
 
     25% {
-
         transform:
             translate(12px,-7px)
             rotate(2deg);
-
     }
 
     50% {
-
         transform:
             translate(3px,7px)
             rotate(-2deg);
-
     }
 
     75% {
-
         transform:
             translate(-10px,-4px)
             rotate(2deg);
-
     }
 
     100% {
-
         transform:
             translate(0,0)
             rotate(-3deg);
-
     }
-
 }
 
 
-/* =====================================================
+/* ================================
    MOVIMIENTO TIBURÓN 1
-===================================================== */
+================================ */
 
 @keyframes tiburon1 {
 
     0% {
-
         transform:
             translate(0,0)
             rotate(1deg);
-
     }
 
     50% {
-
         transform:
             translate(-15px,8px)
             rotate(-3deg);
-
     }
 
     100% {
-
         transform:
             translate(0,0)
             rotate(1deg);
-
     }
-
 }
 
 
-/* =====================================================
-   MOVIMIENTO MANTA 2
-===================================================== */
+/* ================================
+   MOVIMIENTO MANTARRAYA 2
+================================ */
 
 @keyframes manta2 {
 
     0% {
-
         transform:
             translateY(0)
             rotate(0deg);
-
     }
 
     50% {
-
         transform:
             translateY(-12px)
             rotate(4deg);
-
     }
 
     100% {
-
         transform:
             translateY(0)
             rotate(0deg);
-
     }
-
 }
 
 
-/* =====================================================
+/* ================================
+   MOVIMIENTO MANTARRAYA 3
+================================ */
+
+@keyframes manta3 {
+
+    0% {
+        transform:
+            translate(0,0)
+            rotate(-2deg);
+    }
+
+    50% {
+        transform:
+            translate(10px,-8px)
+            rotate(3deg);
+    }
+
+    100% {
+        transform:
+            translate(0,0)
+            rotate(-2deg);
+    }
+}
+
+
+/* ================================
    MOVIMIENTO TIBURÓN 2
-===================================================== */
+================================ */
 
 @keyframes tiburon2 {
 
     0% {
-
-        transform:
-            translate(0,0)
-            rotate(-1deg);
-
-    }
-
-    50% {
-
-        transform:
-            translate(12px,-9px)
-            rotate(3deg);
-
-    }
-
-    100% {
-
-        transform:
-            translate(0,0)
-            rotate(-1deg);
-
-    }
-
-}
-
-
-/* =====================================================
-   MOVIMIENTO ANIMAL 5
-===================================================== */
-
-@keyframes animal5 {
-
-    0% {
-
         transform:
             translate(0,0)
             rotate(-3deg);
-
     }
 
     50% {
-
         transform:
             translate(-18px,7px)
             rotate(3deg);
-
     }
 
     100% {
-
         transform:
             translate(0,0)
             rotate(-3deg);
-
     }
-
 }
 
 
-/* =====================================================
-   🦈 ALETA
-===================================================== */
+/* ================================
+   ALETA DEL TIBURÓN
+================================ */
 
 .aleta {
 
@@ -611,24 +525,19 @@ body {
     top: 35%;
 
     width: 115px;
-
     height: 90px;
 
     z-index: 15;
 
     animation:
-
         nadar
         11s
         infinite
         linear;
-
 }
 
 
-/* =====================================================
-   CUERPO DE LA ALETA
-===================================================== */
+/* CUERPO DE LA ALETA */
 
 .aleta::before {
 
@@ -637,47 +546,32 @@ body {
     position: absolute;
 
     left: 28px;
-
     bottom: 10px;
 
     width: 50px;
-
     height: 68px;
 
     background:
 
         linear-gradient(
             110deg,
-
             #082c42 0%,
-
             #155873 45%,
-
             #061f31 100%
         );
 
     clip-path:
 
         polygon(
-
             0% 100%,
-
             20% 70%,
-
             38% 45%,
-
             54% 12%,
-
             67% 0%,
-
             72% 15%,
-
             74% 38%,
-
             84% 68%,
-
             100% 100%
-
         );
 
     filter:
@@ -686,13 +580,10 @@ body {
             4px 6px 3px
             rgba(0,0,0,.28)
         );
-
 }
 
 
-/* =====================================================
-   BRILLO
-===================================================== */
+/* BRILLO */
 
 .aleta::after {
 
@@ -701,20 +592,16 @@ body {
     position: absolute;
 
     left: 46px;
-
     bottom: 35px;
 
     width: 6px;
-
     height: 40px;
 
     background:
 
         linear-gradient(
             to bottom,
-
             rgba(255,255,255,.28),
-
             transparent
         );
 
@@ -722,13 +609,12 @@ body {
 
     transform:
         rotate(20deg);
-
 }
 
 
-/* =====================================================
-   ESTELA DE AGUA
-===================================================== */
+/* ================================
+   ESTELA
+================================ */
 
 .aleta-estela {
 
@@ -739,7 +625,6 @@ body {
     top: 43%;
 
     width: 100px;
-
     height: 14px;
 
     border-radius: 50%;
@@ -748,11 +633,8 @@ body {
 
         radial-gradient(
             ellipse,
-
             rgba(210,250,255,.55),
-
             rgba(100,210,240,.15),
-
             transparent 70%
         );
 
@@ -761,12 +643,10 @@ body {
     z-index: 13;
 
     animation:
-
         estela
         11s
         infinite
         linear;
-
 }
 
 
@@ -780,13 +660,11 @@ body {
 
         transform:
             scaleX(.5);
-
     }
 
     15% {
 
         opacity: .65;
-
     }
 
     50% {
@@ -795,7 +673,6 @@ body {
 
         transform:
             scaleX(1.4);
-
     }
 
     100% {
@@ -806,15 +683,13 @@ body {
 
         transform:
             scaleX(.7);
-
     }
-
 }
 
 
-/* =====================================================
+/* ================================
    MOVIMIENTO ALETA
-===================================================== */
+================================ */
 
 @keyframes nadar {
 
@@ -825,7 +700,6 @@ body {
         transform:
             translateY(0)
             rotate(-2deg);
-
     }
 
     15% {
@@ -833,7 +707,6 @@ body {
         transform:
             translateY(-7px)
             rotate(1deg);
-
     }
 
     30% {
@@ -841,7 +714,6 @@ body {
         transform:
             translateY(4px)
             rotate(-1deg);
-
     }
 
     45% {
@@ -849,7 +721,6 @@ body {
         transform:
             translateY(-6px)
             rotate(2deg);
-
     }
 
     60% {
@@ -857,7 +728,6 @@ body {
         transform:
             translateY(5px)
             rotate(-2deg);
-
     }
 
     75% {
@@ -865,7 +735,6 @@ body {
         transform:
             translateY(-4px)
             rotate(1deg);
-
     }
 
     100% {
@@ -875,15 +744,13 @@ body {
         transform:
             translateY(0)
             rotate(-2deg);
-
     }
-
 }
 
 
-/* =====================================================
+/* ================================
    BURBUJAS
-===================================================== */
+================================ */
 
 .burbuja {
 
@@ -892,25 +759,21 @@ body {
     bottom: -30px;
 
     width: 10px;
-
     height: 10px;
 
     border:
-
         2px solid
         rgba(255,255,255,.6);
 
     border-radius: 50%;
 
     animation:
-
         subirBurbuja
         7s
         infinite
         ease-in;
 
     z-index: 10;
-
 }
 
 
@@ -919,7 +782,6 @@ body {
     left: 15%;
 
     animation-delay: 1s;
-
 }
 
 
@@ -928,11 +790,9 @@ body {
     left: 35%;
 
     width: 7px;
-
     height: 7px;
 
     animation-delay: 3s;
-
 }
 
 
@@ -941,9 +801,7 @@ body {
     left: 65%;
 
     width: 13px;
-
     height: 13px;
-
 }
 
 
@@ -952,11 +810,9 @@ body {
     left: 85%;
 
     width: 6px;
-
     height: 6px;
 
     animation-delay: 4s;
-
 }
 
 
@@ -968,13 +824,11 @@ body {
             translateY(0);
 
         opacity: 0;
-
     }
 
     20% {
 
         opacity: .8;
-
     }
 
     100% {
@@ -983,15 +837,13 @@ body {
             translateY(-55vh);
 
         opacity: 0;
-
     }
-
 }
 
 
-/* =====================================================
+/* ================================
    ALGAS
-===================================================== */
+================================ */
 
 .alga {
 
@@ -1000,38 +852,30 @@ body {
     bottom: 0;
 
     width: 12px;
-
     height: 90px;
 
     background:
 
         linear-gradient(
             to right,
-
             #075c42,
-
             #0b8a60,
-
             #064d39
         );
 
     border-radius:
-
         50% 50% 0 0;
 
     transform-origin:
-
         bottom;
 
     animation:
-
         algaMovimiento
         3s
         infinite
         ease-in-out;
 
     z-index: 9;
-
 }
 
 
@@ -1040,7 +884,6 @@ body {
     left: 10%;
 
     height: 80px;
-
 }
 
 
@@ -1051,7 +894,6 @@ body {
     height: 120px;
 
     animation-delay: 1s;
-
 }
 
 
@@ -1062,7 +904,6 @@ body {
     height: 100px;
 
     animation-delay: .5s;
-
 }
 
 
@@ -1073,39 +914,28 @@ body {
     height: 70px;
 
     animation-delay: 1.5s;
-
 }
 
 
 @keyframes algaMovimiento {
 
     0% {
-
-        transform:
-            rotate(-5deg);
-
+        transform: rotate(-5deg);
     }
 
     50% {
-
-        transform:
-            rotate(8deg);
-
+        transform: rotate(8deg);
     }
 
     100% {
-
-        transform:
-            rotate(-5deg);
-
+        transform: rotate(-5deg);
     }
-
 }
 
 
-/* =====================================================
+/* ================================
    PANTALLA PRINCIPAL
-===================================================== */
+================================ */
 
 .contenedor {
 
@@ -1122,11 +952,9 @@ body {
     max-width: 700px;
 
     animation:
-
         aparecer
         2s
         ease;
-
 }
 
 
@@ -1138,7 +966,6 @@ body {
 
         transform:
             scale(.7);
-
     }
 
     to {
@@ -1147,15 +974,13 @@ body {
 
         transform:
             scale(1);
-
     }
-
 }
 
 
-/* =====================================================
-   TEXTO
-===================================================== */
+/* ================================
+   TÍTULO
+================================ */
 
 h1 {
 
@@ -1165,9 +990,12 @@ h1 {
 
         0 3px 8px
         rgba(40,120,170,.35);
-
 }
 
+
+/* ================================
+   TEXTO
+================================ */
 
 p {
 
@@ -1179,33 +1007,37 @@ p {
 
         0 2px 5px
         rgba(0,0,0,.15);
-
 }
 
 
-/* =====================================================
+/* ================================
    BOTONES
-===================================================== */
+================================ */
 
 button {
 
     background:
-
         #8ed8ff;
 
     border: none;
 
-    padding: 15px 30px;
+    padding:
+        15px 30px;
 
-    margin: 10px;
+    margin:
+        10px;
 
-    border-radius: 30px;
+    border-radius:
+        30px;
 
-    font-size: 18px;
+    font-size:
+        18px;
 
-    color: white;
+    color:
+        white;
 
-    cursor: pointer;
+    cursor:
+        pointer;
 
     box-shadow:
 
@@ -1215,9 +1047,7 @@ button {
     transition:
 
         transform .3s,
-
         background .3s;
-
 }
 
 
@@ -1228,13 +1058,12 @@ button:hover {
 
     background:
         #65c7f5;
-
 }
 
 
-/* =====================================================
+/* ================================
    MENÚ
-===================================================== */
+================================ */
 
 .menu {
 
@@ -1251,83 +1080,63 @@ button:hover {
     max-width: 700px;
 
     margin: auto;
-
 }
 
 
-/* =====================================================
+/* ================================
    CELULAR
-===================================================== */
+================================ */
 
 @media (max-width: 600px) {
 
     h1 {
-
         font-size: 28px;
-
     }
 
     p {
-
         font-size: 16px;
-
     }
 
     button {
 
         font-size: 16px;
 
-        padding: 12px 24px;
-
+        padding:
+            12px 24px;
     }
 
     .nube {
-
         font-size: 38px;
-
     }
 
     .animal1 {
-
         width: 90px;
-
     }
 
     .animal2 {
-
         width: 105px;
-
     }
 
     .animal3 {
-
         width: 80px;
-
     }
 
     .animal4 {
-
-        width: 100px;
-
+        width: 90px;
     }
 
     .animal5 {
-
         width: 75px;
-
     }
-
 }
 
 
-/* =====================================================
+/* ================================
    MENSAJE
-===================================================== */
+================================ */
 
 #mensaje {
-
     color: white;
-
 }
 
 </style>
@@ -1338,9 +1147,9 @@ button:hover {
 <body>
 
 
-<!-- =====================================================
+<!-- ==================================================
      CIELO
-===================================================== -->
+=================================================== -->
 
 <div class="cielo">
 
@@ -1359,9 +1168,9 @@ button:hover {
 </div>
 
 
-<!-- =====================================================
+<!-- ==================================================
      PANTALLA INICIAL
-===================================================== -->
+=================================================== -->
 
 <div class="contenedor" id="inicio">
 
@@ -1386,9 +1195,9 @@ button:hover {
 </div>
 
 
-<!-- =====================================================
+<!-- ==================================================
      MENÚ
-===================================================== -->
+=================================================== -->
 
 <div class="menu" id="menu">
 
@@ -1419,23 +1228,27 @@ button:hover {
 </div>
 
 
-<!-- =====================================================
+<!-- ==================================================
      MAR
-===================================================== -->
+=================================================== -->
 
 <div class="mar">
 
 
-    <!-- ===============================
-         ANIMALES
-    ================================ -->
+    <!-- ==============================================
+         MANTARRAYA 1
+    =============================================== -->
 
     <img
-        src="imagenes/manta-ray-gliding-gracefully-through-clear-ocean-vector-54488792.avif"
+        src="imagenes/ai-generated-silhouette-stingray-animal-black-color-only-full-body-vector-removebg-preview.png"
         class="animal-mar animal1"
         alt="Mantarraya"
     >
 
+
+    <!-- ==============================================
+         TIBURÓN 1
+    =============================================== -->
 
     <img
         src="imagenes/shark_PNG18832.png"
@@ -1444,6 +1257,10 @@ button:hover {
     >
 
 
+    <!-- ==============================================
+         MANTARRAYA 2
+    =============================================== -->
+
     <img
         src="imagenes/stingray-marine-life-animal-free-png.webp"
         class="animal-mar animal3"
@@ -1451,39 +1268,47 @@ button:hover {
     >
 
 
+    <!-- ==============================================
+         MANTARRAYA 3
+    =============================================== -->
+
     <img
-        src="imagenes/manta-ray-gliding-gracefully-through-clear-ocean-vector-54488792.avif"
+        src="imagenes/ai-generated-silhouette-stingray-animal-black-color-only-full-body-vector-removebg-preview.png"
         class="animal-mar animal4"
         alt="Mantarraya"
     >
 
 
+    <!-- ==============================================
+         TIBURÓN 2
+    =============================================== -->
+
     <img
-        src="imagenes/sweet-cute-simple-shark-clipart-vector.jpg"
+        src="imagenes/sweet-cute-simple-shark-clipart-vector-removebg-preview (1).png"
         class="animal-mar animal5"
         alt="Tiburón"
     >
 
 
-    <!-- ===============================
+    <!-- ==============================================
          SUPERFICIE
-    ================================ -->
+    =============================================== -->
 
     <div class="superficie"></div>
 
 
-    <!-- ===============================
+    <!-- ==============================================
          ALETA
-    ================================ -->
+    =============================================== -->
 
     <div class="aleta"></div>
 
     <div class="aleta-estela"></div>
 
 
-    <!-- ===============================
+    <!-- ==============================================
          BURBUJAS
-    ================================ -->
+    =============================================== -->
 
     <div class="burbuja burbuja1"></div>
 
@@ -1494,9 +1319,9 @@ button:hover {
     <div class="burbuja burbuja4"></div>
 
 
-    <!-- ===============================
+    <!-- ==============================================
          ALGAS
-    ================================ -->
+    =============================================== -->
 
     <div class="alga alga1"></div>
 
@@ -1506,13 +1331,12 @@ button:hover {
 
     <div class="alga alga4"></div>
 
-
 </div>
 
 
-<!-- =====================================================
+<!-- ==================================================
      JAVASCRIPT
-===================================================== -->
+=================================================== -->
 
 <script>
 
@@ -1550,7 +1374,4 @@ function no() {
 
 </body>
 
-</html>
-
-</body>
 </html>
