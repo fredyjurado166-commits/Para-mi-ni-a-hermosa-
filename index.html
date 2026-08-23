@@ -10,10 +10,6 @@
 
 <style>
 
-/* =====================================================
-   CONFIGURACIÓN GENERAL
-===================================================== */
-
 * {
     box-sizing: border-box;
 }
@@ -1727,6 +1723,89 @@ body.sorpresa .superficie {
 
 
 /* =====================================================
+   FLECHAS AGREGADAS
+===================================================== */
+
+.flecha-foto {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    transform:
+        translateY(-50%);
+
+    z-index:
+        100;
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    padding:
+        0;
+
+    margin:
+        0;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(0,35,45,.65);
+
+    border:
+        2px solid
+        rgba(255,255,255,.7);
+
+    color:
+        white;
+
+    font-size:
+        28px;
+
+    line-height:
+        40px;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,.3);
+}
+
+
+.flecha-foto:hover {
+
+    transform:
+        translateY(-50%)
+        scale(1.1);
+
+    background:
+        rgba(0,50,65,.85);
+}
+
+
+.flecha-izquierda {
+
+    left:
+        -55px;
+}
+
+
+.flecha-derecha {
+
+    right:
+        -55px;
+}
+
+
+/* =====================================================
    CARTA FINAL
 ===================================================== */
 
@@ -2497,6 +2576,16 @@ body.sorpresa .superficie {
         <div class="galeria">
 
 
+            <!-- FLECHA IZQUIERDA -->
+
+            <button
+                class="flecha-foto flecha-izquierda"
+                onclick="cambiarFoto(-1)"
+            >
+                ←
+            </button>
+
+
             <img
                 src="imagenes/IMG_20260822_220208.jpg"
                 class="foto activa"
@@ -2530,6 +2619,17 @@ body.sorpresa .superficie {
                 class="foto"
                 onclick="ponerFotoFrente(this)"
             >
+
+
+            <!-- FLECHA DERECHA -->
+
+            <button
+                class="flecha-foto flecha-derecha"
+                onclick="cambiarFoto(1)"
+            >
+                →
+            </button>
+
 
         </div>
 
@@ -2850,7 +2950,35 @@ function abrirFinal() {
    FOTOS
 ===================================================== */
 
+let fotoActual = 0;
+
+
 function ponerFotoFrente(foto) {
+
+    const fotos =
+        document.querySelectorAll(".foto");
+
+
+    fotos.forEach(function(elemento, indice) {
+
+        elemento.classList.remove("activa");
+
+
+        if (elemento === foto) {
+
+            fotoActual = indice;
+
+        }
+
+    });
+
+
+    foto.classList.add("activa");
+
+}
+
+
+function cambiarFoto(direccion) {
 
     const fotos =
         document.querySelectorAll(".foto");
@@ -2863,7 +2991,24 @@ function ponerFotoFrente(foto) {
     });
 
 
-    foto.classList.add("activa");
+    fotoActual += direccion;
+
+
+    if (fotoActual >= fotos.length) {
+
+        fotoActual = 0;
+
+    }
+
+
+    if (fotoActual < 0) {
+
+        fotoActual = fotos.length - 1;
+
+    }
+
+
+    fotos[fotoActual].classList.add("activa");
 
 }
 
