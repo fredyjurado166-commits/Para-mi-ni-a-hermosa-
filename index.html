@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -11,9 +10,9 @@
 
 <style>
 
-/* ==================================================
-   GENERAL
-================================================== */
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
 
 * {
     box-sizing: border-box;
@@ -21,33 +20,23 @@
 
 html,
 body {
-
     margin: 0;
     padding: 0;
-
     width: 100%;
     height: 100%;
-
 }
 
 body {
-
     font-family: Arial, sans-serif;
-
     overflow: hidden;
-
     text-align: center;
-
     color: white;
-
-    background: #8ed8ff;
-
 }
 
 
-/* ==================================================
+/* =====================================================
    CIELO
-================================================== */
+===================================================== */
 
 .cielo {
 
@@ -64,23 +53,21 @@ body {
     z-index: 1;
 
     background:
-
         linear-gradient(
             to bottom,
-            #78cdf7 0%,
-            #a9e3ff 45%,
-            #dff7ff 100%
+            #78cdf7,
+            #a9e3ff,
+            #dff7ff
         );
 
     transition:
         height 4s ease-in-out;
-
 }
 
 
-/* ==================================================
+/* =====================================================
    NUBES
-================================================== */
+===================================================== */
 
 .nube {
 
@@ -96,36 +83,25 @@ body {
         infinite
         alternate
         ease-in-out;
-
 }
 
 .nube1 {
-
     top: 35px;
     left: 5%;
-
 }
 
 .nube2 {
-
     top: 90px;
     right: 8%;
-
     animation-delay: 1s;
-
 }
 
 .nube3 {
-
     top: 170px;
     left: 40%;
-
     font-size: 35px;
-
     animation-delay: 2s;
-
 }
-
 
 @keyframes flotar {
 
@@ -140,9 +116,9 @@ body {
 }
 
 
-/* ==================================================
+/* =====================================================
    MAR
-================================================== */
+===================================================== */
 
 .mar {
 
@@ -157,59 +133,24 @@ body {
     overflow: hidden;
 
     background:
-
         linear-gradient(
             to bottom,
-            #159bd7 0%,
-            #087fbd 35%,
-            #05649b 70%,
-            #034d78 100%
+            #159bd7,
+            #087fbd,
+            #05649b,
+            #034d78
         );
 
     z-index: 2;
 
     transition:
         height 4s ease-in-out;
-
 }
 
 
-/* ==================================================
-   LUZ DEL AGUA
-================================================== */
-
-.mar::before {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-
-        radial-gradient(
-            ellipse at 20% 5%,
-            rgba(255,255,255,.20),
-            transparent 35%
-        ),
-
-        radial-gradient(
-            ellipse at 75% 10%,
-            rgba(255,255,255,.15),
-            transparent 35%
-        );
-
-    pointer-events: none;
-
-    z-index: 1;
-
-}
-
-
-/* ==================================================
+/* =====================================================
    SUPERFICIE DEL AGUA
-================================================== */
+===================================================== */
 
 .superficie {
 
@@ -223,16 +164,9 @@ body {
 
     border-radius: 50%;
 
-    background:
-
-        linear-gradient(
-            to bottom,
-            rgba(220,250,255,.95),
-            rgba(80,205,245,.8)
-        );
+    background: #72dcff;
 
     box-shadow:
-
         0 5px 18px
         rgba(255,255,255,.45);
 
@@ -241,11 +175,7 @@ body {
         4s
         infinite
         ease-in-out;
-
-    z-index: 20;
-
 }
-
 
 @keyframes oleaje {
 
@@ -270,28 +200,25 @@ body {
 }
 
 
-/* ==================================================
-   ANIMALES
-================================================== */
+/* =====================================================
+   ANIMALES DEL MAR
+===================================================== */
 
 .animal-mar {
 
     position: absolute;
 
-    z-index: 8;
-
     object-fit: contain;
 
-    pointer-events: none;
+    z-index: 5;
 
-    user-select: none;
+    pointer-events: none;
 
     filter:
         drop-shadow(
             0 5px 5px
             rgba(0,0,0,.22)
         );
-
 }
 
 
@@ -309,7 +236,6 @@ body {
         5s
         infinite
         ease-in-out;
-
 }
 
 
@@ -327,7 +253,6 @@ body {
         6s
         infinite
         ease-in-out;
-
 }
 
 
@@ -342,10 +267,9 @@ body {
 
     animation:
         manta2
-        5.5s
+        5s
         infinite
         ease-in-out;
-
 }
 
 
@@ -363,7 +287,6 @@ body {
         7s
         infinite
         ease-in-out;
-
 }
 
 
@@ -381,13 +304,12 @@ body {
         4.5s
         infinite
         ease-in-out;
-
 }
 
 
-/* ==================================================
-   MOVIMIENTOS
-================================================== */
+/* =====================================================
+   MOVIMIENTO DE ANIMALES
+===================================================== */
 
 @keyframes manta1 {
 
@@ -397,22 +319,10 @@ body {
             rotate(-3deg);
     }
 
-    25% {
-        transform:
-            translate(12px,-7px)
-            rotate(2deg);
-    }
-
     50% {
         transform:
-            translate(3px,7px)
-            rotate(-2deg);
-    }
-
-    75% {
-        transform:
-            translate(-10px,-4px)
-            rotate(2deg);
+            translate(12px,-7px)
+            rotate(3deg);
     }
 
     100% {
@@ -428,8 +338,7 @@ body {
 
     0% {
         transform:
-            translate(0,0)
-            rotate(1deg);
+            translate(0,0);
     }
 
     50% {
@@ -440,8 +349,7 @@ body {
 
     100% {
         transform:
-            translate(0,0)
-            rotate(1deg);
+            translate(0,0);
     }
 
 }
@@ -451,8 +359,7 @@ body {
 
     0% {
         transform:
-            translateY(0)
-            rotate(0deg);
+            translateY(0);
     }
 
     50% {
@@ -463,8 +370,7 @@ body {
 
     100% {
         transform:
-            translateY(0)
-            rotate(0deg);
+            translateY(0);
     }
 
 }
@@ -474,8 +380,7 @@ body {
 
     0% {
         transform:
-            translate(0,0)
-            rotate(-2deg);
+            translate(0,0);
     }
 
     50% {
@@ -486,8 +391,7 @@ body {
 
     100% {
         transform:
-            translate(0,0)
-            rotate(-2deg);
+            translate(0,0);
     }
 
 }
@@ -497,8 +401,7 @@ body {
 
     0% {
         transform:
-            translate(0,0)
-            rotate(-3deg);
+            translate(0,0);
     }
 
     50% {
@@ -509,23 +412,21 @@ body {
 
     100% {
         transform:
-            translate(0,0)
-            rotate(-3deg);
+            translate(0,0);
     }
 
 }
 
 
-/* ==================================================
-   ALETA DEL TIBURÓN
-================================================== */
+/* =====================================================
+   ALETA DE TIBURÓN
+===================================================== */
 
 .aleta {
 
     position: absolute;
 
     left: -140px;
-
     top: 35%;
 
     width: 115px;
@@ -538,9 +439,10 @@ body {
         11s
         infinite
         linear;
-
 }
 
+
+/* FORMA DE ALETA */
 
 .aleta::before {
 
@@ -555,16 +457,14 @@ body {
     height: 68px;
 
     background:
-
         linear-gradient(
             110deg,
-            #082c42 0%,
-            #155873 45%,
-            #061f31 100%
+            #082c42,
+            #155873,
+            #061f31
         );
 
     clip-path:
-
         polygon(
             0% 100%,
             20% 70%,
@@ -576,198 +476,37 @@ body {
             84% 68%,
             100% 100%
         );
-
-    filter:
-
-        drop-shadow(
-            4px 6px 3px
-            rgba(0,0,0,.28)
-        );
-
 }
 
 
-.aleta::after {
-
-    content: "";
-
-    position: absolute;
-
-    left: 46px;
-    bottom: 35px;
-
-    width: 6px;
-    height: 40px;
-
-    background:
-
-        linear-gradient(
-            to bottom,
-            rgba(255,255,255,.28),
-            transparent
-        );
-
-    border-radius: 50%;
-
-    transform:
-        rotate(20deg);
-
-}
-
-
-/* ==================================================
-   ESTELA
-================================================== */
-
-.aleta-estela {
-
-    position: absolute;
-
-    left: -150px;
-
-    top: 43%;
-
-    width: 100px;
-    height: 14px;
-
-    border-radius: 50%;
-
-    background:
-
-        radial-gradient(
-            ellipse,
-            rgba(210,250,255,.55),
-            rgba(100,210,240,.15),
-            transparent 70%
-        );
-
-    filter: blur(2px);
-
-    z-index: 13;
-
-    animation:
-        estela
-        11s
-        infinite
-        linear;
-
-}
-
-
-@keyframes estela {
-
-    0% {
-
-        left: -160px;
-
-        opacity: 0;
-
-        transform:
-            scaleX(.5);
-
-    }
-
-    15% {
-
-        opacity: .65;
-
-    }
-
-    50% {
-
-        opacity: .35;
-
-        transform:
-            scaleX(1.4);
-
-    }
-
-    100% {
-
-        left: 110%;
-
-        opacity: 0;
-
-        transform:
-            scaleX(.7);
-
-    }
-
-}
-
-
-/* ==================================================
-   MOVIMIENTO ALETA
-================================================== */
+/* MOVIMIENTO */
 
 @keyframes nadar {
 
     0% {
-
         left: -140px;
-
         transform:
-            translateY(0)
-            rotate(-2deg);
-
+            translateY(0);
     }
 
-    15% {
-
+    50% {
         transform:
-            translateY(-7px)
-            rotate(1deg);
-
-    }
-
-    30% {
-
-        transform:
-            translateY(4px)
-            rotate(-1deg);
-
-    }
-
-    45% {
-
-        transform:
-            translateY(-6px)
+            translateY(-8px)
             rotate(2deg);
-
-    }
-
-    60% {
-
-        transform:
-            translateY(5px)
-            rotate(-2deg);
-
-    }
-
-    75% {
-
-        transform:
-            translateY(-4px)
-            rotate(1deg);
-
     }
 
     100% {
-
         left: 110%;
-
         transform:
-            translateY(0)
-            rotate(-2deg);
-
+            translateY(0);
     }
 
 }
 
 
-/* ==================================================
+/* =====================================================
    BURBUJAS
-================================================== */
+===================================================== */
 
 .burbuja {
 
@@ -789,87 +528,52 @@ body {
         7s
         infinite
         ease-in;
-
-    z-index: 10;
-
 }
-
 
 .burbuja1 {
-
     left: 15%;
-
-    animation-delay: 1s;
-
 }
-
 
 .burbuja2 {
-
     left: 35%;
-
-    width: 7px;
-    height: 7px;
-
     animation-delay: 3s;
-
 }
-
 
 .burbuja3 {
-
     left: 65%;
-
     width: 13px;
     height: 13px;
-
 }
-
 
 .burbuja4 {
-
     left: 85%;
-
-    width: 6px;
-    height: 6px;
-
     animation-delay: 4s;
-
 }
-
 
 @keyframes subirBurbuja {
 
     0% {
-
         transform:
             translateY(0);
-
         opacity: 0;
-
     }
 
     20% {
-
         opacity: .8;
-
     }
 
     100% {
-
         transform:
             translateY(-55vh);
-
         opacity: 0;
-
     }
 
 }
 
 
-/* ==================================================
+/* =====================================================
    ALGAS
-================================================== */
+===================================================== */
 
 .alga {
 
@@ -880,14 +584,7 @@ body {
     width: 12px;
     height: 90px;
 
-    background:
-
-        linear-gradient(
-            to right,
-            #075c42,
-            #0b8a60,
-            #064d39
-        );
+    background: #08734e;
 
     border-radius:
         50% 50% 0 0;
@@ -900,74 +597,49 @@ body {
         3s
         infinite
         ease-in-out;
-
-    z-index: 9;
-
 }
-
 
 .alga1 {
-
     left: 10%;
-
-    height: 80px;
-
 }
-
 
 .alga2 {
-
     left: 18%;
-
     height: 120px;
-
-    animation-delay: 1s;
-
 }
-
 
 .alga3 {
-
     right: 15%;
-
     height: 100px;
-
-    animation-delay: .5s;
-
 }
-
 
 .alga4 {
-
     right: 8%;
-
-    height: 70px;
-
-    animation-delay: 1.5s;
-
 }
-
 
 @keyframes algaMovimiento {
 
     0% {
-        transform: rotate(-5deg);
+        transform:
+            rotate(-5deg);
     }
 
     50% {
-        transform: rotate(8deg);
+        transform:
+            rotate(8deg);
     }
 
     100% {
-        transform: rotate(-5deg);
+        transform:
+            rotate(-5deg);
     }
 
 }
 
 
-/* ==================================================
+/* =====================================================
    GLOBO DE CANTOYA
-================================================== */
+===================================================== */
 
 .globo-cantoya {
 
@@ -982,15 +654,7 @@ body {
     z-index: 25;
 
     opacity: 0;
-
-    pointer-events: none;
-
 }
-
-
-/* ==================================================
-   MOVIMIENTO DEL GLOBO
-================================================== */
 
 .globo-volando {
 
@@ -999,53 +663,35 @@ body {
         18s
         ease-in-out
         forwards;
-
 }
-
 
 @keyframes globoAvanza {
 
     0% {
-
         left: -220px;
-
         opacity: 0;
-
-        transform:
-            translateY(20px);
-
     }
 
     10% {
-
         opacity: 1;
-
     }
 
     50% {
-
         transform:
             translateY(-8px);
-
     }
 
     100% {
-
         left: 72%;
-
         opacity: 1;
-
-        transform:
-            translateY(5px);
-
     }
 
 }
 
 
-/* ==================================================
+/* =====================================================
    CINAMORROL
-================================================== */
+===================================================== */
 
 .cinamorrol {
 
@@ -1060,15 +706,7 @@ body {
     z-index: 26;
 
     opacity: 0;
-
-    pointer-events: none;
-
 }
-
-
-/* ==================================================
-   CAÍDA DEL CINAMORROL
-================================================== */
 
 .cinamorrol-cayendo {
 
@@ -1077,68 +715,39 @@ body {
         16s
         ease-in-out
         forwards;
-
 }
-
 
 @keyframes cinamorrolCae {
 
     0% {
-
         opacity: 0;
-
         transform:
-            translateY(-40px)
-            rotate(-5deg);
-
+            translateY(-40px);
     }
 
     10% {
-
         opacity: 1;
-
     }
 
-    30% {
-
-        transform:
-            translateY(70px)
-            rotate(5deg);
-
-    }
-
-    55% {
-
+    50% {
         transform:
             translateY(150px)
-            rotate(-4deg);
-
-    }
-
-    75% {
-
-        transform:
-            translateY(240px)
             rotate(4deg);
-
     }
 
     100% {
-
         opacity: 1;
-
         transform:
             translateY(330px)
             rotate(-3deg);
-
     }
 
 }
 
 
-/* ==================================================
-   PANTALLA PRINCIPAL
-================================================== */
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+===================================================== */
 
 .contenedor {
 
@@ -1154,56 +763,18 @@ body {
 
     max-width: 700px;
 
-    animation:
-        aparecer
-        2s
-        ease;
-
 }
 
-
-@keyframes aparecer {
-
-    from {
-
-        opacity: 0;
-
-        transform:
-            scale(.7);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            scale(1);
-
-    }
-
-}
-
-
-/* ==================================================
-   TÍTULO
-================================================== */
 
 h1 {
 
     color: white;
 
     text-shadow:
-
         0 3px 8px
         rgba(40,120,170,.35);
-
 }
 
-
-/* ==================================================
-   TEXTO
-================================================== */
 
 p {
 
@@ -1211,17 +782,12 @@ p {
 
     font-size: 18px;
 
-    text-shadow:
-
-        0 2px 5px
-        rgba(0,0,0,.15);
-
 }
 
 
-/* ==================================================
+/* =====================================================
    BOTONES
-================================================== */
+===================================================== */
 
 button {
 
@@ -1249,15 +815,12 @@ button {
         pointer;
 
     box-shadow:
-
         0 5px 15px
         rgba(80,180,230,.45);
 
     transition:
-
         transform .3s,
         background .3s;
-
 }
 
 
@@ -1268,13 +831,12 @@ button:hover {
 
     background:
         #65c7f5;
-
 }
 
 
-/* ==================================================
+/* =====================================================
    MENÚ
-================================================== */
+===================================================== */
 
 .menu {
 
@@ -1282,7 +844,7 @@ button:hover {
 
     position: relative;
 
-    z-index: 30;
+    z-index: 40;
 
     padding-top: 15vh;
 
@@ -1291,33 +853,26 @@ button:hover {
     max-width: 700px;
 
     margin: auto;
-
 }
 
 
-/* ==================================================
-   ANIMACIÓN AL PRESIONAR SÍ
-================================================== */
+/* =====================================================
+   ANIMACIÓN DEL MAR AL PRESIONAR SÍ
+===================================================== */
 
 body.sorpresa .cielo {
 
     height: 90vh;
-
 }
-
 
 body.sorpresa .mar {
 
     height: 10vh;
-
 }
 
 
-/* Los animales se esconden suavemente */
-
 body.sorpresa .animal-mar,
 body.sorpresa .aleta,
-body.sorpresa .aleta-estela,
 body.sorpresa .burbuja,
 body.sorpresa .alga,
 body.sorpresa .superficie {
@@ -1325,25 +880,527 @@ body.sorpresa .superficie {
     opacity: 0;
 
     transition:
-        opacity 1s ease;
+        opacity 1s;
+}
+
+
+/* =====================================================
+   PANTALLAS
+===================================================== */
+
+.pantalla {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    overflow: hidden;
+}
+
+
+.pantalla.activa {
+
+    display: block;
+}
+
+
+/* =====================================================
+   BOTÓN REGRESAR
+===================================================== */
+
+.regresar {
+
+    position: absolute;
+
+    top: 20px;
+    left: 20px;
+
+    z-index: 200;
+
+    background:
+        rgba(255,255,255,.25);
+
+    backdrop-filter:
+        blur(5px);
+}
+
+
+/* =====================================================
+   CARTA PARA TI
+===================================================== */
+
+.carta {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff1f5,
+            #ffe3ec
+        );
+}
+
+
+.carta h1 {
+
+    color:
+        #9b3658;
+}
+
+
+/* =====================================================
+   IMÁGENES DE LA CARTA
+===================================================== */
+
+.decoracion-carta {
+
+    position: absolute;
+
+    width: 150px;
+
+    z-index: 5;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 6px 8px
+            rgba(0,0,0,.18)
+        );
+
+    animation:
+        flotarCarta
+        4s
+        infinite
+        ease-in-out;
+}
+
+
+/* IMAGEN DERECHA */
+
+.decoracion-derecha {
+
+    top: 25px;
+
+    right: 35px;
+}
+
+
+/* IMAGEN IZQUIERDA */
+
+.decoracion-izquierda {
+
+    bottom: 25px;
+
+    left: 35px;
+
+    animation-delay:
+        1s;
+}
+
+
+/* =====================================================
+   ROSAS
+===================================================== */
+
+.rosa {
+
+    position: absolute;
+
+    font-size: 55px;
+
+    z-index: 10;
+
+    animation:
+        rosaFlota
+        4s
+        infinite
+        ease-in-out;
+}
+
+
+.rosa1 {
+
+    top: 35%;
+
+    left: 8%;
+}
+
+
+.rosa2 {
+
+    bottom: 15%;
+
+    right: 10%;
+}
+
+
+.rosa3 {
+
+    top: 20%;
+
+    left: 35%;
+}
+
+
+.rosa4 {
+
+    bottom: 20%;
+
+    right: 35%;
+}
+
+
+@keyframes rosaFlota {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(-3deg);
+    }
+
+    50% {
+        transform:
+            translateY(-8px)
+            rotate(3deg);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            rotate(-3deg);
+    }
 
 }
 
 
-/* El globo aparece */
+@keyframes flotarCarta {
 
-body.sorpresa .globo-cantoya {
+    0% {
 
-    opacity: 1;
+        transform:
+            translateY(0)
+            rotate(-2deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px)
+            rotate(2deg);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-2deg);
+
+    }
 
 }
 
 
-/* ==================================================
+/* =====================================================
+   CANCIONES
+===================================================== */
+
+.canciones {
+
+    background:
+        linear-gradient(
+            90deg,
+            #c5a27d,
+            white,
+            #6fa8dc,
+            #b33a3a,
+            #050505
+        );
+
+    background-size:
+        500% 100%;
+
+    animation:
+        coloresCanciones
+        10s
+        linear
+        infinite;
+}
+
+
+@keyframes coloresCanciones {
+
+    0% {
+        background-position:
+            0% 0%;
+    }
+
+    100% {
+        background-position:
+            100% 0%;
+    }
+
+}
+
+
+.titulo-cancion {
+
+    position: absolute;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: white;
+
+    text-shadow:
+        0 2px 5px black;
+}
+
+
+.cancion1 {
+
+    top: 40px;
+    left: 40px;
+}
+
+
+.cancion2 {
+
+    top: 40px;
+    right: 40px;
+}
+
+
+.cancion3 {
+
+    bottom: 40px;
+    left: 40px;
+}
+
+
+.cancion4 {
+
+    bottom: 40px;
+    right: 40px;
+}
+
+
+/* =====================================================
+   NUESTROS MOMENTOS
+===================================================== */
+
+.momentos {
+
+    background:
+        linear-gradient(
+            to bottom,
+            #9de6dc,
+            #45b9b0,
+            #147d82
+        );
+}
+
+
+.mini-mar {
+
+    position: absolute;
+
+    left: 5%;
+    right: 5%;
+
+    bottom: 0;
+
+    height: 45%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #45c9c0,
+            #126d78
+        );
+
+    border-radius:
+        50% 50% 0 0;
+
+    overflow: hidden;
+}
+
+
+.aleta-momentos {
+
+    position: absolute;
+
+    width: 90px;
+    height: 65px;
+
+    left: 50%;
+    top: 45%;
+
+    background:
+        #164b55;
+
+    clip-path:
+        polygon(
+            0 100%,
+            30% 60%,
+            50% 0,
+            65% 60%,
+            100% 100%
+        );
+
+    animation:
+        vueltaAleta
+        5s
+        linear
+        infinite;
+}
+
+
+@keyframes vueltaAleta {
+
+    0% {
+
+        transform:
+            rotate(0deg)
+            translateX(120px)
+            rotate(0deg);
+
+    }
+
+    100% {
+
+        transform:
+            rotate(360deg)
+            translateX(120px)
+            rotate(-360deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   CARTA FINAL
+===================================================== */
+
+.final {
+
+    background:
+        radial-gradient(
+            circle,
+            #d63b50,
+            #9d172d,
+            #650b1b
+        );
+}
+
+
+.final h1 {
+
+    color:
+        white;
+}
+
+
+/* =====================================================
+   CORAZONES
+===================================================== */
+
+.corazon {
+
+    position: absolute;
+
+    font-size: 45px;
+
+    animation:
+        corazonFlota
+        4s
+        infinite
+        ease-in-out;
+}
+
+
+.corazon1 {
+
+    top: 30px;
+    left: 30px;
+}
+
+
+.corazon2 {
+
+    top: 30px;
+    right: 30px;
+}
+
+
+.corazon3 {
+
+    bottom: 30px;
+    left: 30px;
+}
+
+
+.corazon4 {
+
+    bottom: 30px;
+    right: 30px;
+}
+
+
+@keyframes corazonFlota {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(-5deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px)
+            rotate(5deg);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-5deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   CARTA FINAL BLOQUEADA
+===================================================== */
+
+#btnFinal {
+
+    opacity: .5;
+
+    cursor:
+        not-allowed;
+}
+
+
+/* =====================================================
    RESPONSIVE
-================================================== */
+===================================================== */
 
-@media (max-width: 600px) {
+@media(max-width:600px) {
 
     h1 {
         font-size: 28px;
@@ -1354,72 +1411,21 @@ body.sorpresa .globo-cantoya {
     }
 
     button {
-
         font-size: 16px;
-
-        padding:
-            12px 24px;
-
-    }
-
-    .nube {
-
-        font-size: 38px;
-
-    }
-
-    .animal1 {
-
-        width: 90px;
-
-    }
-
-    .animal2 {
-
-        width: 105px;
-
-    }
-
-    .animal3 {
-
-        width: 80px;
-
-    }
-
-    .animal4 {
-
-        width: 90px;
-
-    }
-
-    .animal5 {
-
-        width: 75px;
-
+        padding: 12px 24px;
     }
 
     .globo-cantoya {
-
         width: 120px;
-
     }
 
     .cinamorrol {
-
         width: 55px;
-
     }
 
-}
-
-
-/* ==================================================
-   MENSAJE
-================================================== */
-
-#mensaje {
-
-    color: white;
+    .decoracion-carta {
+        width: 100px;
+    }
 
 }
 
@@ -1431,9 +1437,9 @@ body.sorpresa .globo-cantoya {
 <body>
 
 
-<!-- ==================================================
+<!-- =====================================================
      CIELO
-================================================== -->
+===================================================== -->
 
 <div class="cielo">
 
@@ -1452,9 +1458,9 @@ body.sorpresa .globo-cantoya {
 </div>
 
 
-<!-- ==================================================
+<!-- =====================================================
      PANTALLA INICIAL
-================================================== -->
+===================================================== -->
 
 <div class="contenedor" id="inicio">
 
@@ -1479,9 +1485,9 @@ body.sorpresa .globo-cantoya {
 </div>
 
 
-<!-- ==================================================
+<!-- =====================================================
      MENÚ
-================================================== -->
+===================================================== -->
 
 <div class="menu" id="menu">
 
@@ -1493,157 +1499,365 @@ body.sorpresa .globo-cantoya {
         Escoge un apartado :3 💗
     </p>
 
-    <button>
+
+    <button onclick="abrirPantalla('carta')">
         💌 Carta para ti
     </button>
 
-    <button>
+
+    <button onclick="abrirPantalla('canciones')">
         🎵 Canciones
     </button>
 
-    <button>
+
+    <button onclick="abrirPantalla('momentos')">
         📸 Nuestros momentos
     </button>
 
-    <button>
-        💗 Carta final
+
+    <button
+        id="btnFinal"
+        onclick="abrirFinal()"
+    >
+        💗 Carta final 🔒
     </button>
 
 </div>
 
 
-<!-- ==================================================
+<!-- =====================================================
      MAR
-================================================== -->
+===================================================== -->
 
 <div class="mar">
 
+    <div class="superficie"></div>
 
-    <!-- MANTARRAYA 1 -->
+
+    <!-- MANTARRAYA -->
 
     <img
         src="imagenes/ai-generated-silhouette-stingray-animal-black-color-only-full-body-vector-removebg-preview.png"
         class="animal-mar animal1"
-        alt="Mantarraya"
     >
 
 
-    <!-- TIBURÓN 1 -->
+    <!-- TIBURÓN -->
 
     <img
         src="imagenes/shark_PNG18832.png"
         class="animal-mar animal2"
-        alt="Tiburón"
     >
 
 
-    <!-- MANTARRAYA 2 -->
+    <!-- MANTARRAYA -->
 
     <img
         src="imagenes/stingray-marine-life-animal-free-png.webp"
         class="animal-mar animal3"
-        alt="Mantarraya"
     >
 
 
-    <!-- MANTARRAYA 3 -->
+    <!-- MANTARRAYA -->
 
     <img
         src="imagenes/ai-generated-silhouette-stingray-animal-black-color-only-full-body-vector-removebg-preview.png"
         class="animal-mar animal4"
-        alt="Mantarraya"
     >
 
 
-    <!-- TIBURÓN 2 -->
+    <!-- TIBURÓN -->
 
     <img
         src="imagenes/sweet-cute-simple-shark-clipart-vector-removebg-preview (1).png"
         class="animal-mar animal5"
-        alt="Tiburón"
     >
-
-
-    <!-- SUPERFICIE -->
-
-    <div class="superficie"></div>
 
 
     <!-- ALETA -->
 
     <div class="aleta"></div>
 
-    <div class="aleta-estela"></div>
-
 
     <!-- BURBUJAS -->
 
     <div class="burbuja burbuja1"></div>
-
     <div class="burbuja burbuja2"></div>
-
     <div class="burbuja burbuja3"></div>
-
     <div class="burbuja burbuja4"></div>
 
 
     <!-- ALGAS -->
 
     <div class="alga alga1"></div>
-
     <div class="alga alga2"></div>
-
     <div class="alga alga3"></div>
-
     <div class="alga alga4"></div>
 
 </div>
 
 
-<!-- ==================================================
-     GLOBO DE CANTOYA
-================================================== -->
+<!-- =====================================================
+     GLOBO
+===================================================== -->
 
 <img
     src="imagenes/pngtree-comicstyle-hot-air-balloon-icon-on-white-background-vector-png-image_49384422-removebg-preview (1).png"
     class="globo-cantoya"
     id="globo"
-    alt="Globo de cantoya"
 >
 
 
-<!-- ==================================================
+<!-- =====================================================
      CINAMORROL
-================================================== -->
+===================================================== -->
 
 <img
     src="imagenes/giphy_s (1).gif"
     class="cinamorrol"
     id="cinamorrol"
-    alt="Cinamorrol"
 >
 
 
-<!-- ==================================================
+<!-- =====================================================
+     CARTA PARA TI
+===================================================== -->
+
+<div
+    class="pantalla carta"
+    id="pantalla-carta"
+>
+
+
+    <!-- IMAGEN SUPERIOR DERECHA -->
+
+    <img
+        src="imagenes/513dU2dYgjL._SX354_SY354_BL0_QL100__UXNaN_FMjpg_QL85_-removebg-preview.png"
+        class="decoracion-carta decoracion-derecha"
+    >
+
+
+    <!-- IMAGEN INFERIOR IZQUIERDA -->
+
+    <img
+        src="imagenes/bg_f8f8f8-flat_750x_075_f-pad_750x1000_f8f8f8-removebg-preview.png"
+        class="decoracion-carta decoracion-izquierda"
+    >
+
+
+    <button
+        class="regresar"
+        onclick="cerrarPantalla('carta')"
+    >
+        ← Regresar
+    </button>
+
+
+    <!-- ROSAS -->
+
+    <div class="rosa rosa1">
+        🌹
+    </div>
+
+    <div class="rosa rosa2">
+        🌹
+    </div>
+
+    <div class="rosa rosa3">
+        🌹
+    </div>
+
+    <div class="rosa rosa4">
+        🌹
+    </div>
+
+
+    <h1>
+        💌 Carta para ti
+    </h1>
+
+    <p>
+        Aquí vamos a poner tu carta y los dibujitos después 💗
+    </p>
+
+</div>
+
+
+<!-- =====================================================
+     CANCIONES
+===================================================== -->
+
+<div
+    class="pantalla canciones"
+    id="pantalla-canciones"
+>
+
+
+    <button
+        class="regresar"
+        onclick="cerrarPantalla('canciones')"
+    >
+        ← Regresar
+    </button>
+
+
+    <div class="titulo-cancion cancion1">
+        🎵 Canción 1
+    </div>
+
+
+    <div class="titulo-cancion cancion2">
+        🎵 Canción 2
+    </div>
+
+
+    <div class="titulo-cancion cancion3">
+        🎵 Canción 3
+    </div>
+
+
+    <div class="titulo-cancion cancion4">
+        🎵 Canción 4
+    </div>
+
+
+    <h1>
+        🎵 Nuestras canciones 🎵
+    </h1>
+
+</div>
+
+
+<!-- =====================================================
+     NUESTROS MOMENTOS
+===================================================== -->
+
+<div
+    class="pantalla momentos"
+    id="pantalla-momentos"
+>
+
+
+    <button
+        class="regresar"
+        onclick="cerrarPantalla('momentos')"
+    >
+        ← Regresar
+    </button>
+
+
+    <h1>
+        📸 Nuestros momentos
+    </h1>
+
+
+    <p>
+        Nuestro pequeño mar 🌊
+    </p>
+
+
+    <div class="mini-mar">
+
+        <div class="aleta-momentos"></div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     CARTA FINAL
+===================================================== -->
+
+<div
+    class="pantalla final"
+    id="pantalla-final"
+>
+
+
+    <button
+        class="regresar"
+        onclick="cerrarPantalla('final')"
+    >
+        ← Regresar
+    </button>
+
+
+    <!-- ROSAS -->
+
+    <div class="rosa rosa1">
+        🌹
+    </div>
+
+    <div class="rosa rosa2">
+        🌹
+    </div>
+
+    <div class="rosa rosa3">
+        🌹
+    </div>
+
+    <div class="rosa rosa4">
+        🌹
+    </div>
+
+
+    <!-- CORAZONES -->
+
+    <div class="corazon corazon1">
+        💗
+    </div>
+
+    <div class="corazon corazon2">
+        💕
+    </div>
+
+    <div class="corazon corazon3">
+        💗
+    </div>
+
+    <div class="corazon corazon4">
+        💕
+    </div>
+
+
+    <h1>
+        💗 Carta final 💗
+    </h1>
+
+    <p>
+        Y aquí empieza nuestra última sorpresa...
+    </p>
+
+</div>
+
+
+<!-- =====================================================
      JAVASCRIPT
-================================================== -->
+===================================================== -->
 
 <script>
 
 
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+let cartaAbierta = false;
+
+let cancionesAbiertas = false;
+
+let momentosAbiertos = false;
+
+
+/* =====================================================
+   ENTRAR
+===================================================== */
+
 function entrar() {
-
-
-    /* ================================================
-       ACTIVAMOS LA GRAN ANIMACIÓN
-    ================================================= */
 
     document.body.classList.add("sorpresa");
 
-
-    /* ================================================
-       DESAPARECE LA PANTALLA INICIAL
-    ================================================= */
 
     setTimeout(function() {
 
@@ -1654,10 +1868,6 @@ function entrar() {
     }, 1800);
 
 
-    /* ================================================
-       APARECE EL GLOBO
-    ================================================= */
-
     setTimeout(function() {
 
         document
@@ -1667,10 +1877,6 @@ function entrar() {
     }, 1200);
 
 
-    /* ================================================
-       CINAMORROL
-    ================================================= */
-
     setTimeout(function() {
 
         document
@@ -1679,10 +1885,6 @@ function entrar() {
 
     }, 2200);
 
-
-    /* ================================================
-       APARECE EL MENÚ DESPUÉS
-    ================================================= */
 
     setTimeout(function() {
 
@@ -1695,9 +1897,9 @@ function entrar() {
 }
 
 
-/* ==================================================
+/* =====================================================
    BOTÓN NO
-================================================== */
+===================================================== */
 
 function no() {
 
@@ -1715,6 +1917,108 @@ function no() {
 
 }
 
+
+/* =====================================================
+   ABRIR APARTADO
+===================================================== */
+
+function abrirPantalla(nombre) {
+
+    document
+        .getElementById(
+            "pantalla-" + nombre
+        )
+        .classList.add("activa");
+
+
+    if (nombre === "carta") {
+
+        cartaAbierta = true;
+
+    }
+
+
+    if (nombre === "canciones") {
+
+        cancionesAbiertas = true;
+
+    }
+
+
+    if (nombre === "momentos") {
+
+        momentosAbiertos = true;
+
+    }
+
+
+    revisarFinal();
+
+}
+
+
+/* =====================================================
+   CERRAR APARTADO
+===================================================== */
+
+function cerrarPantalla(nombre) {
+
+    document
+        .getElementById(
+            "pantalla-" + nombre
+        )
+        .classList.remove("activa");
+
+}
+
+
+/* =====================================================
+   REVISAR CARTA FINAL
+===================================================== */
+
+function revisarFinal() {
+
+    if (
+        cartaAbierta &&
+        cancionesAbiertas &&
+        momentosAbiertos
+    ) {
+
+        const boton =
+            document.getElementById("btnFinal");
+
+
+        boton.style.opacity = "1";
+
+        boton.style.cursor = "pointer";
+
+        boton.innerHTML =
+            "💗 Carta final 💗";
+
+    }
+
+}
+
+
+/* =====================================================
+   ABRIR CARTA FINAL
+===================================================== */
+
+function abrirFinal() {
+
+    if (
+        cartaAbierta &&
+        cancionesAbiertas &&
+        momentosAbiertos
+    ) {
+
+        document
+            .getElementById("pantalla-final")
+            .classList.add("activa");
+
+    }
+
+}
 
 </script>
 
