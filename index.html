@@ -7,123 +7,694 @@
 <title>Para mi cielo 💙</title>
 
 <style>
-body {
-body {
-    background: linear-gradient(#bde9ff 0%, #dff7ff 45%, #55c7ff 100%);
-    overflow-x: hidden;
-}
-  font-family: Arial, sans-serif;
-  overflow: hidden;
-  text-align: center;
-  color: #4a90c2;
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    text-align: center;
+    color: #4a90c2;
+
+    /* CIELO */
+    background: linear-gradient(
+        to bottom,
+        #8ed8ff 0%,
+        #bde9ff 30%,
+        #dff7ff 50%,
+        #55c7ff 100%
+    );
+}
+
+
+/* =========================
+   CIELO
+========================= */
+
+.cielo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+/* NUBES */
+
 .nube {
-  position: absolute;
-  font-size: 50px;
-  animation: flotar 5s infinite alternate;
+    position: absolute;
+    font-size: 50px;
+    opacity: 0.85;
+    animation: flotar 5s infinite alternate ease-in-out;
+}
+
+.nube1 {
+    top: 35px;
+    left: 5%;
+}
+
+.nube2 {
+    top: 90px;
+    right: 8%;
+    animation-delay: 1s;
+}
+
+.nube3 {
+    top: 180px;
+    left: 35%;
+    font-size: 35px;
+    animation-delay: 2s;
 }
 
 @keyframes flotar {
-  from {transform: translateY(0);}
-  to {transform: translateY(30px);}
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(18px);
+    }
 }
 
+
+/* =========================
+   MAR
+========================= */
+
+.mar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 52vh;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #159bd7 0%,
+            #087fbd 35%,
+            #05649b 70%,
+            #034d78 100%
+        );
+
+    z-index: 2;
+}
+
+
+/* SUPERFICIE DEL AGUA */
+
+.superficie {
+    position: absolute;
+    top: -12px;
+    left: -5%;
+
+    width: 110%;
+    height: 30px;
+
+    background: #72dcff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 5px 15px rgba(255,255,255,0.45);
+
+    animation: oleaje 4s infinite ease-in-out;
+}
+
+@keyframes oleaje {
+
+    0% {
+        transform: translateX(-2%) scaleY(1);
+    }
+
+    50% {
+        transform: translateX(2%) scaleY(1.25);
+    }
+
+    100% {
+        transform: translateX(-2%) scaleY(1);
+    }
+
+}
+
+
+/* =========================
+   BURBUJAS
+========================= */
+
+.burbuja {
+    position: absolute;
+
+    bottom: -30px;
+
+    width: 10px;
+    height: 10px;
+
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 50%;
+
+    animation: subirBurbuja 7s infinite ease-in;
+}
+
+.burbuja1 {
+    left: 15%;
+    animation-delay: 1s;
+}
+
+.burbuja2 {
+    left: 35%;
+    width: 7px;
+    height: 7px;
+    animation-delay: 3s;
+}
+
+.burbuja3 {
+    left: 65%;
+    width: 13px;
+    height: 13px;
+    animation-delay: 0s;
+}
+
+.burbuja4 {
+    left: 85%;
+    width: 6px;
+    height: 6px;
+    animation-delay: 4s;
+}
+
+@keyframes subirBurbuja {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-55vh);
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   ALETAS DEL TIBURÓN
+========================= */
+
+.aleta {
+    position: absolute;
+
+    top: 45%;
+
+    left: -100px;
+
+    width: 75px;
+    height: 55px;
+
+    z-index: 10;
+
+    animation: nadar 10s infinite linear;
+}
+
+
+/*
+   TRIÁNGULO QUE FORMA
+   LA ALETA
+*/
+
+.aleta::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 12px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 55px solid #063f63;
+
+    transform: rotate(-8deg);
+
+}
+
+
+/* SOMBRA DE LA ALETA */
+
+.aleta::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 18px;
+    bottom: 0;
+
+    width: 42px;
+    height: 8px;
+
+    background: rgba(0,0,0,0.25);
+
+    border-radius: 50%;
+
+}
+
+
+/* MOVIMIENTO DEL TIBURÓN */
+
+@keyframes nadar {
+
+    0% {
+        left: -100px;
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-8px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    75% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        left: 110%;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   ALGAS
+========================= */
+
+.alga {
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 12px;
+
+    height: 90px;
+
+    background: #08734e;
+
+    border-radius: 50% 50% 0 0;
+
+    transform-origin: bottom;
+
+    animation: algaMovimiento 3s infinite ease-in-out;
+
+}
+
+.alga1 {
+    left: 10%;
+    height: 80px;
+}
+
+.alga2 {
+    left: 18%;
+    height: 120px;
+    animation-delay: 1s;
+}
+
+.alga3 {
+    right: 15%;
+    height: 100px;
+    animation-delay: 0.5s;
+}
+
+.alga4 {
+    right: 8%;
+    height: 70px;
+    animation-delay: 1.5s;
+}
+
+@keyframes algaMovimiento {
+
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(8deg);
+    }
+
+    100% {
+        transform: rotate(-5deg);
+    }
+
+}
+
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+
 .contenedor {
-  margin-top: 100px;
-  animation: aparecer 2s;
+
+    position: relative;
+
+    z-index: 20;
+
+    margin: 0 auto;
+
+    padding-top: 15vh;
+
+    width: 90%;
+    max-width: 700px;
+
+    animation: aparecer 2s ease;
+
 }
 
 @keyframes aparecer {
-  from {opacity:0; transform:scale(.7);}
-  to {opacity:1; transform:scale(1);}
+
+    from {
+        opacity: 0;
+        transform: scale(.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
 }
 
+
+/* =========================
+   TÍTULO
+========================= */
+
+h1 {
+
+    color: #ffffff;
+
+    text-shadow:
+        0 3px 8px rgba(40,120,170,0.35);
+
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+p {
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,0.15);
+
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
 button {
-  background:#8ed8ff;
-  border:none;
-  padding:15px 30px;
-  margin:10px;
-  border-radius:30px;
-  font-size:18px;
-  color:white;
-  cursor:pointer;
-  box-shadow:0 5px 15px #9edcff;
+
+    background: #8ed8ff;
+
+    border: none;
+
+    padding: 15px 30px;
+
+    margin: 10px;
+
+    border-radius: 30px;
+
+    font-size: 18px;
+
+    color: white;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(80,180,230,0.45);
+
+    transition:
+        transform 0.3s,
+        background 0.3s;
+
 }
 
 button:hover {
-  transform:scale(1.1);
+
+    transform: scale(1.1);
+
+    background: #65c7f5;
+
 }
+
+
+/* =========================
+   MENÚ
+========================= */
 
 .menu {
-  display:none;
+
+    display: none;
+
+    position: relative;
+
+    z-index: 20;
+
+    padding-top: 15vh;
+
+    width: 90%;
+
+    max-width: 700px;
+
+    margin: auto;
+
 }
 
-.tiburon {
-  position:absolute;
-  bottom:20px;
-  font-size:45px;
-  animation:nadar 8s infinite linear;
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .nube {
+        font-size: 38px;
+    }
+
 }
 
-@keyframes nadar {
-  from {left:-60px;}
-  to {left:100%;}
+
+/* =========================
+   MENSAJE
+========================= */
+
+#mensaje {
+
+    color: white;
+
 }
+
 </style>
 
 </head>
 
+
 <body>
 
-<div class="nube" style="top:20px;left:20px;">☁️</div>
-<div class="nube" style="top:80px;right:30px;">☁️</div>
+
+<!-- =========================
+     CIELO
+========================= -->
+
+<div class="cielo">
+
+    <div class="nube nube1">☁️</div>
+
+    <div class="nube nube2">☁️</div>
+
+    <div class="nube nube3">☁️</div>
+
+</div>
+
+
+<!-- =========================
+     PANTALLA PRINCIPAL
+========================= -->
 
 <div class="contenedor" id="inicio">
 
-<h1>💗 Para mi cielo 💗</h1>
+    <h1>💗 Para mi cielo 💗</h1>
 
-<p>¿Quieres ver lo que preparé para ti? :3 ☁️</p>
+    <p>
+        ¿Quieres ver lo que preparé para ti? :3 ☁️
+    </p>
 
-<button onclick="entrar()">Sí 💗</button>
-<button onclick="no()">No 💔</button>
+    <button onclick="entrar()">
+        Sí 💗
+    </button>
 
-<p id="mensaje"></p>
+    <button onclick="no()">
+        No 💔
+    </button>
+
+    <p id="mensaje"></p>
 
 </div>
 
+
+<!-- =========================
+     MENÚ
+========================= -->
 
 <div class="menu" id="menu">
 
-<h1>Bienvenida, mi niña hermosa 💗</h1>
+    <h1>
+        Bienvenida, mi niña hermosa 💗
+    </h1>
 
-<p>Escoge un apartado :3 💗 </p>
+    <p>
+        Escoge un apartado :3 💗
+    </p>
 
-<button>💌 Carta para ti</button>
-<button>🎵 Canciones</button>
-<button>📸 Nuestros momentos</button>
-<button>💗 Carta final</button>
+    <button>
+        💌 Carta para ti
+    </button>
+
+    <button>
+        🎵 Canciones
+    </button>
+
+    <button>
+        📸 Nuestros momentos
+    </button>
+
+    <button>
+        💗 Carta final
+    </button>
 
 </div>
 
 
-<div class="tiburon">🦈</div>
+<!-- =========================
+     MAR
+========================= -->
 
+<div class="mar">
+
+    <!-- Superficie -->
+
+    <div class="superficie"></div>
+
+
+    <!-- Aleta de tiburón -->
+
+    <div class="aleta"></div>
+
+
+    <!-- Burbujas -->
+
+    <div class="burbuja burbuja1"></div>
+
+    <div class="burbuja burbuja2"></div>
+
+    <div class="burbuja burbuja3"></div>
+
+    <div class="burbuja burbuja4"></div>
+
+
+    <!-- Algas -->
+
+    <div class="alga alga1"></div>
+
+    <div class="alga alga2"></div>
+
+    <div class="alga alga3"></div>
+
+    <div class="alga alga4"></div>
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 
-function entrar(){
-document.getElementById("inicio").style.display="none";
-document.getElementById("menu").style.display="block";
+function entrar() {
+
+    document.getElementById("inicio").style.display = "none";
+
+    document.getElementById("menu").style.display = "block";
+
 }
 
 
-function no(){
-document.getElementById("mensaje").innerHTML=
-"Ándale será bonito 💙<br><button onclick='entrar()'>Ver sorpresa ☁️</button>";
+function no() {
+
+    document.getElementById("mensaje").innerHTML =
+        "Ándale será bonito 💙<br>" +
+        "<button onclick='entrar()'>Ver sorpresa ☁️</button>";
+
 }
 
 </script>
+
+
+</body>
+
+</html>
 
 
 </body>
