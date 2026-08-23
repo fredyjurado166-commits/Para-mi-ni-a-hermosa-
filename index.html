@@ -11,9 +11,9 @@
 
 <style>
 
-/* ================================
+/* ==================================================
    GENERAL
-================================ */
+================================================== */
 
 * {
     box-sizing: border-box;
@@ -21,11 +21,13 @@
 
 html,
 body {
+
     margin: 0;
     padding: 0;
 
     width: 100%;
     height: 100%;
+
 }
 
 body {
@@ -39,12 +41,13 @@ body {
     color: white;
 
     background: #8ed8ff;
+
 }
 
 
-/* ================================
+/* ==================================================
    CIELO
-================================ */
+================================================== */
 
 .cielo {
 
@@ -68,12 +71,16 @@ body {
             #a9e3ff 45%,
             #dff7ff 100%
         );
+
+    transition:
+        height 4s ease-in-out;
+
 }
 
 
-/* ================================
+/* ==================================================
    NUBES
-================================ */
+================================================== */
 
 .nube {
 
@@ -89,12 +96,14 @@ body {
         infinite
         alternate
         ease-in-out;
+
 }
 
 .nube1 {
 
     top: 35px;
     left: 5%;
+
 }
 
 .nube2 {
@@ -103,6 +112,7 @@ body {
     right: 8%;
 
     animation-delay: 1s;
+
 }
 
 .nube3 {
@@ -113,6 +123,7 @@ body {
     font-size: 35px;
 
     animation-delay: 2s;
+
 }
 
 
@@ -125,12 +136,13 @@ body {
     to {
         transform: translateY(18px);
     }
+
 }
 
 
-/* ================================
+/* ==================================================
    MAR
-================================ */
+================================================== */
 
 .mar {
 
@@ -155,12 +167,16 @@ body {
         );
 
     z-index: 2;
+
+    transition:
+        height 4s ease-in-out;
+
 }
 
 
-/* ================================
+/* ==================================================
    LUZ DEL AGUA
-================================ */
+================================================== */
 
 .mar::before {
 
@@ -187,12 +203,13 @@ body {
     pointer-events: none;
 
     z-index: 1;
+
 }
 
 
-/* ================================
-   SUPERFICIE
-================================ */
+/* ==================================================
+   SUPERFICIE DEL AGUA
+================================================== */
 
 .superficie {
 
@@ -226,6 +243,7 @@ body {
         ease-in-out;
 
     z-index: 20;
+
 }
 
 
@@ -248,12 +266,13 @@ body {
             translateX(-2%)
             scaleY(1);
     }
+
 }
 
 
-/* ================================
+/* ==================================================
    ANIMALES
-================================ */
+================================================== */
 
 .animal-mar {
 
@@ -272,12 +291,11 @@ body {
             0 5px 5px
             rgba(0,0,0,.22)
         );
+
 }
 
 
-/* ================================
-   MANTARRAYA 1
-================================ */
+/* MANTARRAYA 1 */
 
 .animal1 {
 
@@ -291,12 +309,11 @@ body {
         5s
         infinite
         ease-in-out;
+
 }
 
 
-/* ================================
-   TIBURÓN 1
-================================ */
+/* TIBURÓN 1 */
 
 .animal2 {
 
@@ -310,12 +327,11 @@ body {
         6s
         infinite
         ease-in-out;
+
 }
 
 
-/* ================================
-   MANTARRAYA 2
-================================ */
+/* MANTARRAYA 2 */
 
 .animal3 {
 
@@ -329,12 +345,11 @@ body {
         5.5s
         infinite
         ease-in-out;
+
 }
 
 
-/* ================================
-   MANTARRAYA 3
-================================ */
+/* MANTARRAYA 3 */
 
 .animal4 {
 
@@ -348,12 +363,11 @@ body {
         7s
         infinite
         ease-in-out;
+
 }
 
 
-/* ================================
-   TIBURÓN 2
-================================ */
+/* TIBURÓN 2 */
 
 .animal5 {
 
@@ -367,12 +381,13 @@ body {
         4.5s
         infinite
         ease-in-out;
+
 }
 
 
-/* ================================
-   MOVIMIENTO MANTARRAYA 1
-================================ */
+/* ==================================================
+   MOVIMIENTOS
+================================================== */
 
 @keyframes manta1 {
 
@@ -405,12 +420,9 @@ body {
             translate(0,0)
             rotate(-3deg);
     }
+
 }
 
-
-/* ================================
-   MOVIMIENTO TIBURÓN 1
-================================ */
 
 @keyframes tiburon1 {
 
@@ -431,12 +443,9 @@ body {
             translate(0,0)
             rotate(1deg);
     }
+
 }
 
-
-/* ================================
-   MOVIMIENTO MANTARRAYA 2
-================================ */
 
 @keyframes manta2 {
 
@@ -457,12 +466,9 @@ body {
             translateY(0)
             rotate(0deg);
     }
+
 }
 
-
-/* ================================
-   MOVIMIENTO MANTARRAYA 3
-================================ */
 
 @keyframes manta3 {
 
@@ -483,12 +489,9 @@ body {
             translate(0,0)
             rotate(-2deg);
     }
+
 }
 
-
-/* ================================
-   MOVIMIENTO TIBURÓN 2
-================================ */
 
 @keyframes tiburon2 {
 
@@ -509,12 +512,13 @@ body {
             translate(0,0)
             rotate(-3deg);
     }
+
 }
 
 
-/* ================================
+/* ==================================================
    ALETA DEL TIBURÓN
-================================ */
+================================================== */
 
 .aleta {
 
@@ -534,10 +538,9 @@ body {
         11s
         infinite
         linear;
+
 }
 
-
-/* CUERPO DE LA ALETA */
 
 .aleta::before {
 
@@ -580,10 +583,9 @@ body {
             4px 6px 3px
             rgba(0,0,0,.28)
         );
+
 }
 
-
-/* BRILLO */
 
 .aleta::after {
 
@@ -609,12 +611,13 @@ body {
 
     transform:
         rotate(20deg);
+
 }
 
 
-/* ================================
+/* ==================================================
    ESTELA
-================================ */
+================================================== */
 
 .aleta-estela {
 
@@ -647,6 +650,7 @@ body {
         11s
         infinite
         linear;
+
 }
 
 
@@ -660,11 +664,13 @@ body {
 
         transform:
             scaleX(.5);
+
     }
 
     15% {
 
         opacity: .65;
+
     }
 
     50% {
@@ -673,6 +679,7 @@ body {
 
         transform:
             scaleX(1.4);
+
     }
 
     100% {
@@ -683,13 +690,15 @@ body {
 
         transform:
             scaleX(.7);
+
     }
+
 }
 
 
-/* ================================
+/* ==================================================
    MOVIMIENTO ALETA
-================================ */
+================================================== */
 
 @keyframes nadar {
 
@@ -700,6 +709,7 @@ body {
         transform:
             translateY(0)
             rotate(-2deg);
+
     }
 
     15% {
@@ -707,6 +717,7 @@ body {
         transform:
             translateY(-7px)
             rotate(1deg);
+
     }
 
     30% {
@@ -714,6 +725,7 @@ body {
         transform:
             translateY(4px)
             rotate(-1deg);
+
     }
 
     45% {
@@ -721,6 +733,7 @@ body {
         transform:
             translateY(-6px)
             rotate(2deg);
+
     }
 
     60% {
@@ -728,6 +741,7 @@ body {
         transform:
             translateY(5px)
             rotate(-2deg);
+
     }
 
     75% {
@@ -735,6 +749,7 @@ body {
         transform:
             translateY(-4px)
             rotate(1deg);
+
     }
 
     100% {
@@ -744,13 +759,15 @@ body {
         transform:
             translateY(0)
             rotate(-2deg);
+
     }
+
 }
 
 
-/* ================================
+/* ==================================================
    BURBUJAS
-================================ */
+================================================== */
 
 .burbuja {
 
@@ -774,6 +791,7 @@ body {
         ease-in;
 
     z-index: 10;
+
 }
 
 
@@ -782,6 +800,7 @@ body {
     left: 15%;
 
     animation-delay: 1s;
+
 }
 
 
@@ -793,6 +812,7 @@ body {
     height: 7px;
 
     animation-delay: 3s;
+
 }
 
 
@@ -802,6 +822,7 @@ body {
 
     width: 13px;
     height: 13px;
+
 }
 
 
@@ -813,6 +834,7 @@ body {
     height: 6px;
 
     animation-delay: 4s;
+
 }
 
 
@@ -824,11 +846,13 @@ body {
             translateY(0);
 
         opacity: 0;
+
     }
 
     20% {
 
         opacity: .8;
+
     }
 
     100% {
@@ -837,13 +861,15 @@ body {
             translateY(-55vh);
 
         opacity: 0;
+
     }
+
 }
 
 
-/* ================================
+/* ==================================================
    ALGAS
-================================ */
+================================================== */
 
 .alga {
 
@@ -876,6 +902,7 @@ body {
         ease-in-out;
 
     z-index: 9;
+
 }
 
 
@@ -884,6 +911,7 @@ body {
     left: 10%;
 
     height: 80px;
+
 }
 
 
@@ -894,6 +922,7 @@ body {
     height: 120px;
 
     animation-delay: 1s;
+
 }
 
 
@@ -904,6 +933,7 @@ body {
     height: 100px;
 
     animation-delay: .5s;
+
 }
 
 
@@ -914,6 +944,7 @@ body {
     height: 70px;
 
     animation-delay: 1.5s;
+
 }
 
 
@@ -930,12 +961,184 @@ body {
     100% {
         transform: rotate(-5deg);
     }
+
 }
 
 
-/* ================================
+/* ==================================================
+   GLOBO DE CANTOYA
+================================================== */
+
+.globo-cantoya {
+
+    position: absolute;
+
+    left: -220px;
+
+    top: 12%;
+
+    width: 170px;
+
+    z-index: 25;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+/* ==================================================
+   MOVIMIENTO DEL GLOBO
+================================================== */
+
+.globo-volando {
+
+    animation:
+        globoAvanza
+        18s
+        ease-in-out
+        forwards;
+
+}
+
+
+@keyframes globoAvanza {
+
+    0% {
+
+        left: -220px;
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    10% {
+
+        opacity: 1;
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+
+    }
+
+    100% {
+
+        left: 72%;
+
+        opacity: 1;
+
+        transform:
+            translateY(5px);
+
+    }
+
+}
+
+
+/* ==================================================
+   CINAMORROL
+================================================== */
+
+.cinamorrol {
+
+    position: absolute;
+
+    left: 32%;
+
+    top: -20px;
+
+    width: 75px;
+
+    z-index: 26;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+/* ==================================================
+   CAÍDA DEL CINAMORROL
+================================================== */
+
+.cinamorrol-cayendo {
+
+    animation:
+        cinamorrolCae
+        16s
+        ease-in-out
+        forwards;
+
+}
+
+
+@keyframes cinamorrolCae {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(-40px)
+            rotate(-5deg);
+
+    }
+
+    10% {
+
+        opacity: 1;
+
+    }
+
+    30% {
+
+        transform:
+            translateY(70px)
+            rotate(5deg);
+
+    }
+
+    55% {
+
+        transform:
+            translateY(150px)
+            rotate(-4deg);
+
+    }
+
+    75% {
+
+        transform:
+            translateY(240px)
+            rotate(4deg);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(330px)
+            rotate(-3deg);
+
+    }
+
+}
+
+
+/* ==================================================
    PANTALLA PRINCIPAL
-================================ */
+================================================== */
 
 .contenedor {
 
@@ -955,6 +1158,7 @@ body {
         aparecer
         2s
         ease;
+
 }
 
 
@@ -966,6 +1170,7 @@ body {
 
         transform:
             scale(.7);
+
     }
 
     to {
@@ -974,13 +1179,15 @@ body {
 
         transform:
             scale(1);
+
     }
+
 }
 
 
-/* ================================
+/* ==================================================
    TÍTULO
-================================ */
+================================================== */
 
 h1 {
 
@@ -990,12 +1197,13 @@ h1 {
 
         0 3px 8px
         rgba(40,120,170,.35);
+
 }
 
 
-/* ================================
+/* ==================================================
    TEXTO
-================================ */
+================================================== */
 
 p {
 
@@ -1007,12 +1215,13 @@ p {
 
         0 2px 5px
         rgba(0,0,0,.15);
+
 }
 
 
-/* ================================
+/* ==================================================
    BOTONES
-================================ */
+================================================== */
 
 button {
 
@@ -1048,6 +1257,7 @@ button {
 
         transform .3s,
         background .3s;
+
 }
 
 
@@ -1058,12 +1268,13 @@ button:hover {
 
     background:
         #65c7f5;
+
 }
 
 
-/* ================================
+/* ==================================================
    MENÚ
-================================ */
+================================================== */
 
 .menu {
 
@@ -1080,12 +1291,57 @@ button:hover {
     max-width: 700px;
 
     margin: auto;
+
 }
 
 
-/* ================================
-   CELULAR
-================================ */
+/* ==================================================
+   ANIMACIÓN AL PRESIONAR SÍ
+================================================== */
+
+body.sorpresa .cielo {
+
+    height: 90vh;
+
+}
+
+
+body.sorpresa .mar {
+
+    height: 10vh;
+
+}
+
+
+/* Los animales se esconden suavemente */
+
+body.sorpresa .animal-mar,
+body.sorpresa .aleta,
+body.sorpresa .aleta-estela,
+body.sorpresa .burbuja,
+body.sorpresa .alga,
+body.sorpresa .superficie {
+
+    opacity: 0;
+
+    transition:
+        opacity 1s ease;
+
+}
+
+
+/* El globo aparece */
+
+body.sorpresa .globo-cantoya {
+
+    opacity: 1;
+
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
 
 @media (max-width: 600px) {
 
@@ -1103,40 +1359,68 @@ button:hover {
 
         padding:
             12px 24px;
+
     }
 
     .nube {
+
         font-size: 38px;
+
     }
 
     .animal1 {
+
         width: 90px;
+
     }
 
     .animal2 {
+
         width: 105px;
+
     }
 
     .animal3 {
+
         width: 80px;
+
     }
 
     .animal4 {
+
         width: 90px;
+
     }
 
     .animal5 {
+
         width: 75px;
+
     }
+
+    .globo-cantoya {
+
+        width: 120px;
+
+    }
+
+    .cinamorrol {
+
+        width: 55px;
+
+    }
+
 }
 
 
-/* ================================
+/* ==================================================
    MENSAJE
-================================ */
+================================================== */
 
 #mensaje {
+
     color: white;
+
 }
 
 </style>
@@ -1149,7 +1433,7 @@ button:hover {
 
 <!-- ==================================================
      CIELO
-=================================================== -->
+================================================== -->
 
 <div class="cielo">
 
@@ -1170,7 +1454,7 @@ button:hover {
 
 <!-- ==================================================
      PANTALLA INICIAL
-=================================================== -->
+================================================== -->
 
 <div class="contenedor" id="inicio">
 
@@ -1197,7 +1481,7 @@ button:hover {
 
 <!-- ==================================================
      MENÚ
-=================================================== -->
+================================================== -->
 
 <div class="menu" id="menu">
 
@@ -1230,14 +1514,12 @@ button:hover {
 
 <!-- ==================================================
      MAR
-=================================================== -->
+================================================== -->
 
 <div class="mar">
 
 
-    <!-- ==============================================
-         MANTARRAYA 1
-    =============================================== -->
+    <!-- MANTARRAYA 1 -->
 
     <img
         src="imagenes/ai-generated-silhouette-stingray-animal-black-color-only-full-body-vector-removebg-preview.png"
@@ -1246,9 +1528,7 @@ button:hover {
     >
 
 
-    <!-- ==============================================
-         TIBURÓN 1
-    =============================================== -->
+    <!-- TIBURÓN 1 -->
 
     <img
         src="imagenes/shark_PNG18832.png"
@@ -1257,9 +1537,7 @@ button:hover {
     >
 
 
-    <!-- ==============================================
-         MANTARRAYA 2
-    =============================================== -->
+    <!-- MANTARRAYA 2 -->
 
     <img
         src="imagenes/stingray-marine-life-animal-free-png.webp"
@@ -1268,9 +1546,7 @@ button:hover {
     >
 
 
-    <!-- ==============================================
-         MANTARRAYA 3
-    =============================================== -->
+    <!-- MANTARRAYA 3 -->
 
     <img
         src="imagenes/ai-generated-silhouette-stingray-animal-black-color-only-full-body-vector-removebg-preview.png"
@@ -1279,9 +1555,7 @@ button:hover {
     >
 
 
-    <!-- ==============================================
-         TIBURÓN 2
-    =============================================== -->
+    <!-- TIBURÓN 2 -->
 
     <img
         src="imagenes/sweet-cute-simple-shark-clipart-vector-removebg-preview (1).png"
@@ -1290,25 +1564,19 @@ button:hover {
     >
 
 
-    <!-- ==============================================
-         SUPERFICIE
-    =============================================== -->
+    <!-- SUPERFICIE -->
 
     <div class="superficie"></div>
 
 
-    <!-- ==============================================
-         ALETA
-    =============================================== -->
+    <!-- ALETA -->
 
     <div class="aleta"></div>
 
     <div class="aleta-estela"></div>
 
 
-    <!-- ==============================================
-         BURBUJAS
-    =============================================== -->
+    <!-- BURBUJAS -->
 
     <div class="burbuja burbuja1"></div>
 
@@ -1319,9 +1587,7 @@ button:hover {
     <div class="burbuja burbuja4"></div>
 
 
-    <!-- ==============================================
-         ALGAS
-    =============================================== -->
+    <!-- ALGAS -->
 
     <div class="alga alga1"></div>
 
@@ -1335,23 +1601,103 @@ button:hover {
 
 
 <!-- ==================================================
+     GLOBO DE CANTOYA
+================================================== -->
+
+<img
+    src="imagenes/pngtree-comicstyle-hot-air-balloon-icon-on-white-background-vector-png-image_49384422-removebg-preview (1).png"
+    class="globo-cantoya"
+    id="globo"
+    alt="Globo de cantoya"
+>
+
+
+<!-- ==================================================
+     CINAMORROL
+================================================== -->
+
+<img
+    src="imagenes/giphy_s (1).gif"
+    class="cinamorrol"
+    id="cinamorrol"
+    alt="Cinamorrol"
+>
+
+
+<!-- ==================================================
      JAVASCRIPT
-=================================================== -->
+================================================== -->
 
 <script>
 
+
 function entrar() {
 
-    document
-        .getElementById("inicio")
-        .style.display = "none";
 
-    document
-        .getElementById("menu")
-        .style.display = "block";
+    /* ================================================
+       ACTIVAMOS LA GRAN ANIMACIÓN
+    ================================================= */
+
+    document.body.classList.add("sorpresa");
+
+
+    /* ================================================
+       DESAPARECE LA PANTALLA INICIAL
+    ================================================= */
+
+    setTimeout(function() {
+
+        document
+            .getElementById("inicio")
+            .style.display = "none";
+
+    }, 1800);
+
+
+    /* ================================================
+       APARECE EL GLOBO
+    ================================================= */
+
+    setTimeout(function() {
+
+        document
+            .getElementById("globo")
+            .classList.add("globo-volando");
+
+    }, 1200);
+
+
+    /* ================================================
+       CINAMORROL
+    ================================================= */
+
+    setTimeout(function() {
+
+        document
+            .getElementById("cinamorrol")
+            .classList.add("cinamorrol-cayendo");
+
+    }, 2200);
+
+
+    /* ================================================
+       APARECE EL MENÚ DESPUÉS
+    ================================================= */
+
+    setTimeout(function() {
+
+        document
+            .getElementById("menu")
+            .style.display = "block";
+
+    }, 4500);
 
 }
 
+
+/* ==================================================
+   BOTÓN NO
+================================================== */
 
 function no() {
 
@@ -1368,6 +1714,7 @@ function no() {
         "</button>";
 
 }
+
 
 </script>
 
